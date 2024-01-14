@@ -1,7 +1,11 @@
 <script setup lang="ts">
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 </script>
 
 <template>
-  <main>
-  </main>
+    <Avatar>
+    <AvatarImage src="https://github.com/radix-vue.png" alt="@radix-vue" />
+    <AvatarFallback>CN</AvatarFallback>
+  </Avatar>
 </template>
+
