@@ -39,6 +39,7 @@ import type {
 
 declare module 'vue-router/auto/routes' {
   export interface RouteNamedMap {
+    '/': RouteRecordInfo<'/', '/', Record<never, never>, Record<never, never>>,
   }
 }
 
@@ -120,7 +121,11 @@ declare module 'vue-router/auto' {
   export {
     _definePage as definePage,
     _HasDataLoaderMeta as HasDataLoaderMeta,
-    _setupDataFetchingGuard as seauto
+    _setupDataFetchingGuard as setupDataFetchingGuard,
+    _stopDataFetchingScope as stopDataFetchingScope,
+  } from 'unplugin-vue-router/runtime'
+}
+
 declare module 'vue-router' {
   import type { RouteNamedMap } from 'vue-router/auto/routes'
 
