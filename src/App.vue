@@ -1,32 +1,15 @@
 <script setup lang="ts">
 import { RouterView } from 'vue-router'
-
-import { Button } from '@/components/ui/button'
-
-import { useDark, useToggle } from '@vueuse/core'
-
-const isDark = useDark()
-const toggleDark = useToggle(isDark)
-
-
-function test() {
-  console.log('test')
-} 
+import TestHeader from '@/components/header/TestHeader.vue'
 </script>
 
 <template>
-  <div class="bg-background h-full min-h-screen">
-
-    <pre>
-      {{ isDark }}
-
-    </pre>
-    <Button @click="isDark = !isDark">Toggle dark mode</Button>
-
-
-    <RouterView />
+  <div class="h-full min-h-screen bg-background">
+    <div class="flex flex-col">
+      <TestHeader></TestHeader>
+      <RouterView />
+    </div>
   </div>
 </template>
 
-<style scoped>
-</style>
+<style scoped></style>
