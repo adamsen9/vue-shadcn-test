@@ -1,6 +1,6 @@
 <template>
   <aside
-    class="transition-width flex min-h-96 flex-col gap-2 bg-sky-700 pl-1 pr-1 text-white"
+    class="transition-width flex min-h-96 flex-col gap-2 bg-sky-700 pl-2 pr-2 text-white"
     :class="[{ 'w-16': expanded, 'w-64': !expanded }]"
   >
     <button @click="$emit('toggle')">{{ expanded }}</button>
